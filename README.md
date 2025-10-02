@@ -11,65 +11,40 @@ This repository provides a complete, ready-to-use project for business analytics
 pip install -r requirements.txt
 ```
 
-3. Navigate to the `notebooks` directory and open the analysis notebook:
+3. Launch Jupyter and open the analysis notebook:
 
 ```bash
-cd notebooks
 jupyter notebook analysis.ipynb
 ```
+
+The notebook will load the dataset, perform EDA with visualizations, and train predictive models. You can run the cells sequentially or explore them interactively.
 
 ## Project structure
 
 ```
 business-insights-analytics/
-├── data/
-│   └── synthetic_projects.csv   # Synthetic dataset
-├── notebooks/
-│   └── analysis.ipynb           # Jupyter notebook with EDA and models
-├── requirements.txt             # Python dependencies
-└── README.md                    # Project overview and instructions
+├── analysis.ipynb          # Analysis notebook with EDA, visualizations and models
+├── synthetic_projects.csv  # Synthetic project management dataset
+├── requirements.txt        # Python dependencies
+└── README.md               # Project overview and instructions
 ```
 
-## Dataset overview
+## Difficulty progression
 
-The dataset (`synthetic_projects.csv`) simulates 1,000 projects across various industries. Each row represents a project with attributes such as budget, duration, team size, complexity, risk score, stakeholder engagement level, and whether the project was successful. The dataset is intentionally simplified yet realistic enough to practice data analysis techniques.
+The notebook is organized to build skills progressively:
 
-Key columns:
+1. **Basic EDA** – Load the dataset, inspect its structure, and calculate summary statistics.
+2. **Visualization** – Create histograms, scatter plots, and correlation heatmaps to uncover patterns.
+3. **Predictive modeling** – Build and evaluate classification models (Logistic Regression and Random Forest) to predict project success.
 
-- **project_id**: Unique ID for each project
-- **industry**: Sector (Finance, Healthcare, Technology, Retail, Manufacturing)
-- **team_size**: Number of team members
-- **budget_k**: Project budget (thousands of dollars)
-- **duration_months**: Project duration in months
-- **complexity**: Project complexity score (1–10)
-- **vendor_count**: Number of external vendors
-- **risk_score**: Risk score (0–1)
-- **stakeholder_engagement**: Stakeholder engagement level (1–5)
-- **actual_cost_k**: Actual cost incurred (thousands of dollars)
-- **success**: Binary indicator of project success
-- **satisfaction**: Stakeholder satisfaction score (0–10)
+Feel free to extend the analysis with more sophisticated models or feature engineering as you progress.
 
-## Analysis notebook
+## Use cases
 
-The Jupyter notebook walks through:
-
-1. Loading and inspecting the dataset.
-2. Performing basic EDA with summary statistics.
-3. Visualizing distributions, relationships, and correlations.
-4. Preparing data for modeling (one-hot encoding, train/test split).
-5. Building and evaluating two models:
-   - Logistic Regression (baseline classifier)
-   - Random Forest Classifier (more advanced)
-6. Interpreting results and discussing potential next steps.
-
-The notebook is intentionally commented and structured to guide readers through each step. Feel free to modify the notebook, experiment with different models, or extend the analysis for more advanced applications.
-
-## Use cases and difficulty levels
-
-- **Beginner**: Focus on understanding the dataset, calculating summary statistics, and creating basic visualizations.
-- **Intermediate**: Build the logistic regression model and interpret coefficients.
-- **Advanced**: Explore the random forest model, tune hyperparameters, or add additional algorithms (e.g., gradient boosting, SVM). You can also engineer new features or perform cross-validation.
+- **Business Analysts** – Understand key factors driving project success and present insights to stakeholders.
+- **Program Managers** – Use the synthetic dataset to practice resource and risk analysis.
+- **Data Analysts** – Experiment with data preprocessing, visualization techniques, and model evaluation.
 
 ## License
 
-This project is provided for educational purposes. Feel free to use and modify it for learning and portfolio-building.
+This project is provided under the MIT License. See the `LICENSE` file for details.
